@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<title>WebViewDemo - Alex Tam</title> 
+<style> 
+body{text-align:center;}
+.list{margin-bottom:40px;}
+</style> 
+</head> 
+<body> 
+<div> 
+    <div> 
+        <h1>去星巴克，喝杯咖啡配科技</h1> 
+        <span style="color:purple;">商业 |  陈 昊 | 3 小时前 (转载自ifanr爱范儿)</span><br /><br />
+        <div id="content"> 
+			星巴克绝对是全球科技媒体中亮相频率最高的咖啡店。
+			<br/><br/>
+			他们积极地在科技领域寻求合作，也是全球罕见地设置有首席数码官（Chief Digital Officer）一职的咖啡连锁企业，担任此职位的 Adam Brotman 在接受福布斯采访时曾经表示：“在连接线上和线下的时候，我们认识到互联网的线上资源能够让我们能更好地通过全新的互动，大规模地和客户建立可靠的联系。”
+			<br/><br/>
+			一家具有科技范儿的咖啡馆是怎么样的？
+			<br/><br/>
+				<div class="list"><img class="scrollLoading" id="img_1" xSrc="http://images.ifanr.cn/wp-content/uploads/2015/05/powermat-hands-on.jpg" src="file:///android_asset/nopic.gif"" style="background:url(file:///android_asset/nopic.gif") no-repeat center;" /><br />
+				<h3>Powermat 无线充电<h3>
+				</div>
+			走进星巴克还带着自己的充电器和数据线到处找插座的日子很快就要到头了。在美国旧金山湾区的星巴克门店已经配备了 Powermat 无线充电系统。
+			<br/><br/>
+			只要将 Powermat 提供的充电环接到手机充电口上，再按照指示将充电环摆放到桌面上的特定位置，位于桌子下方的充电组件就会开始为手机进行无线充电。
+			<br/><br/>
+			早在 2012 年，星巴克就宣布支持 Powermat 背后的无线供电标准联盟 Power Matter Alliance (PMA)，助其推广该无线充电技术。
+			<br/><br/>
+			而他们的对手 WPA 也非常强劲， 因为 WPA 是 Qi 无线充电标准的推动者——包括三星、LG、诺基亚等大厂商都支持这个标准。
+			<br/><br/>
+			其实这也不是星巴克第一次在标准大战中站队了，早在 2001 年，星巴克就已经在科技界发挥了自己的力量，它和苹果纷纷站在的 Wi-Fi 标准这边，助其击败 Home RF，成为当今家喻户晓的无线网络标准。
+			<br/><br/><br/>
+				<div class="list"><img class="scrollLoading" id="img_2" xSrc="http://images.ifanr.cn/wp-content/uploads/2015/05/starbucks_spotify.jpg" src="file:///android_asset/nopic.gif"" style="background:url(file:///android_asset/nopic.gif) no-repeat center;" /><br />
+				<h3>Spotify 在线音乐<h3>
+				</div>
+			<br/><br/><br/>
+				<div class="list"><img class="scrollLoading" id="img_3" xSrc="http://images.ifanr.cn/wp-content/uploads/2015/05/starbucks-app.jpg" src="file:///android_asset/nopic.gif" style="background:url(file:///android_asset/nopic.gif) no-repeat center;" /><br />
+				<h3>强大的星巴克官方 App<h3>
+				<div class="list"><img class="scrollLoading" id="img_4" xSrc="http://images.ifanr.cn/wp-content/uploads/2015/05/starbucks_order_and_pay.jpg" src="file:///android_asset/nopic.gif" style="background:url(file:///android_asset/nopic.gif) no-repeat center;" /><br />
+				<br/>
+				<div class="list"><img class="scrollLoading" id="img_5" xSrc="http://images.ifanr.cn/wp-content/uploads/2015/05/starbucks-postmates.jpg" src="file:///android_asset/nopic.gif" style="background:url(file:///android_asset/nopic.gif) no-repeat center;" /><br />
+				<br/>
+				</div>
+			<h5>星巴克的官方 App 还整合了移动支付功能，而且非常受欢迎。根据星巴克2015 年第一财季的财报，在美国市场，他们平均每周会有 700 万笔交易通过手机完成，占交易总数 16%。</h5>
+			<br/><br/>
+			一个咖啡连锁店的 App，居然变成了全美最受欢迎的移动支付应用之一。
+			<br/><br/><br/>
+			<a href="http://www.ifanr.com/522993">原文链接</a>
+			<br/><br/>
+        </div> 
+    </div> 
+</div> 
+<script type="text/javascript">
+    var scrollLoad = (function (options) {
+        var defaults = (arguments.length == 0) ? { src: 'xSrc', time: 1000} : { src: options.src || 'xSrc', time: options.time ||1000};
+        var camelize = function (s) {
+            return s.replace(/-(\w)/g, function (strMatch, p1) {
+                return p1.toUpperCase(); 
+            });
+        };
+        this.getStyle = function (element, property) {
+            if (arguments.length != 2) return false;
+			
+            var value = element.style[camelize(property)];
+            if (!value) {
+                if (document.defaultView && document.defaultView.getComputedStyle) {
+                    var css = document.defaultView.getComputedStyle(element, null);
+                    value = css ? css.getPropertyValue(property) : null;
+                } else if (element.currentStyle) {
+                    value = element.currentStyle[camelize(property)];
+                }
+            }
+            return value == 'auto' ? '' : value;
+        };
+        var _init = function () {
+            var offsetPage = window.pageYOffset ? window.pageYOffset : window.document.documentElement.scrollTop,
+                offsetWindow = offsetPage + Number(window.innerHeight ? window.innerHeight : document.documentElement.clientHeight),
+                docImg = document.images,
+                _len = docImg.length;
+            if (!_len) return false;
+            for (var i = 0; i < _len; i++) {
+                var attrSrc = docImg[i].getAttribute(defaults.src),
+                    o = docImg[i], tag = o.nodeName.toLowerCase(), imgId = o.id;;
+                if (o) {
+                    postPage = o.getBoundingClientRect().top + window.document.documentElement.scrollTop + window.document.body.scrollTop; postWindow = postPage + Number(this.getStyle(o, 'height').replace('px', ''));
+                    if ((postPage > offsetPage && postPage < offsetWindow) || (postWindow > offsetPage && postWindow < offsetWindow)) {
+                        if (tag === "img" && attrSrc !== null) {
+                            o.src = window.mylistner.replaceimg(i,attrSrc,imgId);
+                        }
+                        o = null;
+                    }
+                }
+            };
+            window.onscroll = function () {
+                setTimeout(function () {
+                    _init();
+                }, defaults.time);
+            }
+        };
+        return _init();
+    });
+    scrollLoad();
+</script> 
+</body> 
+</html>
